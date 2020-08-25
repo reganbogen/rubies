@@ -1,13 +1,11 @@
 class Name
+  attr_reader :title
+  
   def initialize(title, first_name, middle_name, last_name)
     @title =title
     @first_name =first_name
     @middle_name =middle_name
     @last_name =last_name
-  end
-  
-  def title
-    @title
   end
   
   def first_name
