@@ -20,7 +20,7 @@ class Name
   end
 end
 
-name = Name.new
+name = Name.new("Mrs.")
 puts name.title
 puts name.first_name
 puts name.middle_name
