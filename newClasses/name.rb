@@ -1,6 +1,10 @@
 class Name
+  def initialize(title)
+    @title =title
+  end
+  
   def title
-    "Mrs."
+    @title
   end
   
   def first_name
