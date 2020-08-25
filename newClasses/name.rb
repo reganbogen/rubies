@@ -13,8 +13,10 @@ class Name
     @first_name + " " + @middle_name + " " + @last_name
   end
   
+  def full_name_with_title
+    @title + " " + full_name()
   
 end
 
 name = Name.new("Mrs.", "Juniper", "Louise", "Layman")
-puts name.title + " " + name.full_name
+puts name.full_name_with_title
