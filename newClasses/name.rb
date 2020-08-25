@@ -1,6 +1,9 @@
 class Name
-  def initialize(title)
+  def initialize(title, first_name, middle_name, last_name)
     @title =title
+    @first_name =first_name
+    @middle_name =middle_name
+    @last_name =last_name
   end
   
   def title
@@ -8,19 +11,19 @@ class Name
   end
   
   def first_name
-    "Juniper"
+    @first_name
   end
   
   def middle_name
-    "Louise"
+    @middle_name
   end
   
   def last_name
-    "Layman"
+    @last_name
   end
 end
 
-name = Name.new("Mrs.")
+name = Name.new("Mrs.", "Juniper", "Louise", "Layman")
 puts name.title + " " +
   name.first_name + " " +
   name.middle_name + " " +
