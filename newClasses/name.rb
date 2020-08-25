@@ -21,7 +21,7 @@ class Name
 end
 
 name = Name.new("Mrs.")
-puts name.title
-puts name.first_name
-puts name.middle_name
-puts name.last_name
+puts name.title + " " +
+  name.first_name + " " +
+  name.middle_name + " " +
+  name.last_name
