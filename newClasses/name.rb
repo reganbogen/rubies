@@ -15,3 +15,9 @@ class Name
     "Layman"
   end
 end
+
+name = Name.new
+puts name.title
+puts name.first_name
+puts name.middle_name
+puts name.last_name
