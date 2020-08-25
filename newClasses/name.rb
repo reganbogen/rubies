@@ -1,5 +1,5 @@
 class Name
-  attr_reader :title
+  attr_reader :title, :first_name, :middle_name, :last_name
   
   def initialize(title, first_name, middle_name, last_name)
     @title =title
@@ -8,17 +8,6 @@ class Name
     @last_name =last_name
   end
   
-  def first_name
-    @first_name
-  end
-  
-  def middle_name
-    @middle_name
-  end
-  
-  def last_name
-    @last_name
-  end
 end
 
 name = Name.new("Mrs.", "Juniper", "Louise", "Layman")
