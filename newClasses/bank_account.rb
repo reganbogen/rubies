@@ -32,6 +32,6 @@ bank_account = BankAccount.new("Toggle")
 band_account.credit("Paycheck", 100)
 
 bank_account.debit("Groceries", 40)
-puts bank_account.balance
+puts sprintf("%0.2f", bank_account.balance)
 
 
