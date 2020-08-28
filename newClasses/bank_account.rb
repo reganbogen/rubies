@@ -26,12 +26,13 @@ class BankAccount
     end
     return balance
   end
+  
+  def to_s
+    "Name: #{name}, Balance: #{sprintf("%0.2f", balance)}"
+  end
 end
 
 bank_account = BankAccount.new("Toggle")
 bank_account.credit("Paycheck", 100)
-
 bank_account.debit("Groceries", 40)
-puts sprintf("%0.2f", bank_account.balance)
-
-
+puts bank_account
