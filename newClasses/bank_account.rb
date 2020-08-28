@@ -33,11 +33,13 @@ class BankAccount
   
   def print_register
     puts "#{name}'s Bank Account"
+    puts "-" * 40
     
     puts "Description".ljust(30) + "Amount".rjust(10)
     @transactions.each do |transaction|
       puts transaction[:description].ljust(30) + sprintf("%0.2f", transaction[:amount]).rjust(10)
     end
+    puts "-" * 40
     puts "Balance:".ljust(30)+ sprintf("%0.2f", balance).rjust(10)
   end
   
@@ -46,6 +48,7 @@ end
 bank_account = BankAccount.new("Toggle")
 bank_account.credit("Paycheck", 100)
 bank_account.debit("Groceries", 40)
+bank_account.debit("Gas", 10.51)
 puts bank_account
 puts bank_account
 puts "Register:"
