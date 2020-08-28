@@ -20,7 +20,7 @@ class BankAccount
   end
   
   def balance
-    blanace = 0
+    balance = 0
     @transactions.each do |transaction|
       balance += transaction[:amount]
     end
@@ -29,7 +29,7 @@ class BankAccount
 end
 
 bank_account = BankAccount.new("Toggle")
-band_account.credit("Paycheck", 100)
+bank_account.credit("Paycheck", 100)
 
 bank_account.debit("Groceries", 40)
 puts sprintf("%0.2f", bank_account.balance)
