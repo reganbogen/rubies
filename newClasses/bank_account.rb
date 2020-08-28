@@ -20,7 +20,7 @@ class BankAccount
   end
   
   def balance
-    balance = 0
+    balance = 0.0
     @transactions.each do |transaction|
       balance += transaction[:amount]
     end
@@ -34,10 +34,11 @@ class BankAccount
   def print_register
     puts "#{name}'s Bank Account"
     
-    puts "Description\tAmount"
+    puts "Description".ljust(30) + "Amount".rjust(10)
     @transactions.each do |transaction|
-      puts transaction[:description] + "\t" + transaction[:amount].to_s
+      puts transaction[:description].ljust(30) + sprintf("%0.2f", transaction[:amount]).rjust(10)
     end
+    puts "Balance:".ljust(30)+ sprintf("%0.2f", balance).rjust(10)
   end
   
 end
